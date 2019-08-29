@@ -17,10 +17,10 @@ public class ParkingBoyController {
     @Autowired
     private ParkingBoyMapper parkingBoyMapper;
 
-//    @GetMapping("")
-//    public ResponseEntity<List<Employee>> getAll() {
-//        return ResponseEntity.ok(parkingBoyMapper.selectAll());
-//    }
+    @GetMapping
+    public List<ParkingBoy> getAllParkingBoys(){
+        return parkingBoyMapper.getAllParkingBoy();
+    }
 
     @PostMapping("")
     @ResponseStatus(HttpStatus.CREATED)
