@@ -27,6 +27,7 @@ CREATE TABLE `parkinglot` (
   `parkinglot_available_position_count` int(11) DEFAULT NULL,
   `parkingboy_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`parkinglot_id`),
+  FOREIGN KEY(parkingboy_id) REFERENCES parkingboy(parkingboy_id)
 --   KEY `parkingboy_id` (`parkingboy_id`),
 --   CONSTRAINT `parkingboy_id` FOREIGN KEY (`parkingboy_id`) REFERENCES `parkingboy` (`parkingboy_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
